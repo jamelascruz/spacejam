@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Jam's Porfolio</title>
+  <link rel="shortcut icon" href="images\" type="image/x-icon">
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <!-- Google Fonts -->
@@ -23,7 +24,7 @@
 
 </head>
 
-<body class="">
+<body>
   <header class="container">
     <nav id="nav">
       <a href="#home" id="logo"> <img src="images/logo.png" alt="" height="32px" width="100%"></a>
@@ -48,15 +49,19 @@
         <p>A future Web Designer and Developer</p>
 
         <div class="social_icon">
-          <a href="" class="fb" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="" class="twi" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-          <a href="" class="tiktok" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
-          <a href="" class="insta" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.facebook.com/jamela.cruz.98" class="fb icon" target="_blank"><i
+              class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://twitter.com/cruzjamela15" class="twi icon" target="_blank"><i
+              class="fa-brands fa-twitter"></i></a>
+          <a href="https://www.tiktok.com/@imjamjam" class="tiktok icon" target="_blank"><i
+              class="fa-brands fa-tiktok"></i></a>
+          <a href="https://www.instagram.com/cruzjamela03/" class="insta icon" target="_blank"><i
+              class="fa-brands fa-instagram"></i></a>
         </div>
 
       </div>
-      <div class="myimg hom_sec p-3">
-        <img src="images/myimg.png" alt="" height="300px" width="300px">
+      <div class="myimg hom_sec">
+        <img src="images/myimg.png" alt="" height="400px" width="400px">
       </div>
     </div>
   </section>
@@ -204,31 +209,33 @@
     <div class="contact-wrapper">
 
       <!-- Left contact page -->
+      <div class="contact-left-form">
+        <form id="contact-form" method="post" action="" name="submit-to-google-sheet">
 
-      <form id="contact-form" class="form-horizontal" role="form" method="post" action="">
-
-        <div class="form-group pb-3">
-          <div class="col-sm-12">
-            <input type="text" class="form-control" id="name" placeholder="NAME" name="name" value="" required>
-          </div>
-        </div>
-
-        <div class="form-group pb-3">
-          <div class="col-sm-12">
-            <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value="" required>
-          </div>
-        </div>
-
-        <textarea class="form-control pb-3" rows="10" placeholder="MESSAGE" name="msg" required></textarea>
-
-        <button class="btn send-button" id="submit" type="submit" value="SEND">
-          <div class="alt-send-button">
-            <i class="fa fa-paper-plane"></i><span onclick="displayBox()" class="send-text">SEND</span>
+          <div class="form-group pb-3">
+            <div class="col-sm-12">
+              <input type="text" class="form-control" id="name" placeholder="NAME" name="name" value="" required>
+            </div>
           </div>
 
-        </button>
+          <div class="form-group pb-3">
+            <div class="col-sm-12">
+              <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value="" required>
+            </div>
+          </div>
 
-      </form>
+          <textarea class="form-control pb-3" rows="10" placeholder="MESSAGE" name="msg" required></textarea>
+
+          <button class="btn send-button" id="submit" type="submit" value="SEND">
+            <div class="alt-send-button">
+              <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
+            </div>
+
+          </button>
+
+        </form>
+        <span id="resmessages"></span>
+      </div>
 
       <!-- Left contact page -->
 
@@ -306,11 +313,27 @@
     })
   </script>
   <script src="https://kit.fontawesome.com/d3890cf1ab.js" crossorigin="anonymous"></script>
+
   <script>
-    function displayBox() {
-      alert("Thanks for submitting your message!");
-    }
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwKaNEq2TkENNNRESgkXRsqhWZw1Hc0gdSc8E4Cx414YgU5otPTFmTVdiGl4x_ToOLk/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const resmessages = document.getElementById("resmessages") 
+
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+          resmessages.innerHTML = "Message sent successfully!"
+          setTimeout(function(){
+            resmessages.innerHTML = ""
+          },5000)
+          form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
   </script>
+
 </body>
 
 </html>
