@@ -77,11 +77,12 @@ nav ul.active {
 
 section#home {
     display: grid;
-    padding: 3rem 5rem;
+    padding: 10rem 3rem;
 
 }
 
 section#home h1 {
+   
     margin-top: 7rem;
     font-size: 48px;
 }
@@ -405,7 +406,7 @@ textarea {
 .alt-send-button {
     width: 400px;
     height: 34px;
-    transition: all .2s ease-in-out;
+    transition: all .1s ease-in-out;
 }
 
 .send-text {
@@ -483,6 +484,13 @@ hr {
     border-color: rgba(255, 255, 255, .6);
 }
 
+span#resmessages {
+    color: #61b752;
+    padding-top: 10px;
+    font-size: 15px;
+    display: block;
+}
+
 
 
 
@@ -510,7 +518,9 @@ hr {
     header {
         padding: 3.2rem 6rem;
     }
-
+    section#home {
+        padding: 7rem 3rem;
+    }
     section#home h1 {
         margin-top: 1rem;
         font-size: 40px;
@@ -551,11 +561,13 @@ hr {
         align-items: self-start;
     }
 
+   
+
     .myimg img {
-        height: 400px;
-        width: 400px;
+        height: 683px;
+        width: 683px;
         align-items: center;
-        margin: 0px 100px;
+        margin: 0px -44px;
     }
 
 }
@@ -564,7 +576,9 @@ hr {
     header {
         padding: 2rem 3rem;
     }
-
+    section#home {
+        padding: 2rem 3rem;
+    }
     section#home h1 {
         font-size: 30px;
     }
@@ -574,6 +588,7 @@ hr {
     }
 
     #ham-menu {
+        padding-right: 20px;
         display: block;
         color: #000000;
         z-index: 1;
@@ -627,8 +642,8 @@ hr {
     }
 
     .myimg img {
-        height: 400px;
-        width: 400px;
+        height: 500px;
+        width: 500px;
         margin: 0px 100px 0px 0px;
     }
     .d-flex {
@@ -637,6 +652,9 @@ hr {
             flex-direction: column;
         
     
+}
+section#resume {
+    padding: 1rem 0rem;
 }
 }
 @media only screen and (max-width: 575px) {
@@ -656,15 +674,15 @@ hr {
     }
 
     .myimg img {
-        height: 300px;
-        width: 300px;
+        height: 450px;
+        width: 450px;
         align-items: center;
-        margin: 0px 20px 0px 20px;
+      
     }
 }
 
 /* Contact Media Queries*/
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 991px) {
     .contact-wrapper {
         display: flex;
         flex-direction: column;
