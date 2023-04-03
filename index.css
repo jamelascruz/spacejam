@@ -277,6 +277,7 @@ section#home .hom_sec_main {
 
 
 section#resume {
+    width: 100%;
     align-items: center;
     position: relative;
     margin-top: 100px;
@@ -317,7 +318,7 @@ section#resume .row-resume-content-box .col-lg-6 {
     position: relative;
     display: block;
     width: calc(124% + 1.3px);
-    height: 273px;
+    height: 222px;
 }
 
 .custom-shape-divider-top-1679572685 .shape-fill {
@@ -644,7 +645,7 @@ span#resmessages {
     .myimg img {
         height: 500px;
         width: 500px;
-        margin: 0px 100px 0px 0px;
+        margin: 0px;
     }
     .d-flex {
        
@@ -674,8 +675,9 @@ section#resume {
     }
 
     .myimg img {
-        height: 450px;
-        width: 450px;
+        padding-top: 20px;
+        height: 400px;
+        width: 390px;
         align-items: center;
       
     }
