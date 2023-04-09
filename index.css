@@ -1,4 +1,6 @@
-html {
+html,body {
+    width: 100%;
+    height: 100%;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -74,15 +76,14 @@ nav ul.active {
     left: 0;
 }
 
-
 section#home {
     display: grid;
-    padding: 10rem 3rem;
+    padding: 3rem 3rem;
 
 }
 
 section#home h1 {
-   
+
     margin-top: 7rem;
     font-size: 48px;
 }
@@ -110,7 +111,7 @@ section#home .hom_sec_main {
     text-align: center;
     width: 100%;
     height: 100%;
-    font-size: 25px;
+    font-size: 21px;
     line-height: 60px;
 }
 
@@ -186,6 +187,8 @@ section#home .hom_sec_main {
     margin: 0;
     font-size: 18px;
 }
+
+
 
 /* Resume Box
 ---------------------*/
@@ -352,7 +355,7 @@ section#contact {
     height: auto;
     display: grid;
     padding: 0rem 5rem;
-   justify-content: center;
+    justify-content: center;
 
 }
 
@@ -361,6 +364,7 @@ section#contact h1 {
     text-align: center;
     font-weight: 700;
 }
+
 section#contact p {
     font-size: 18px;
     text-align: center;
@@ -375,14 +379,14 @@ section#contact p {
     padding: 20px;
     position: relative;
     max-width: 840px;
-   align-items: center;
+    align-items: center;
 }
 
 /* Left contact page */
 .form-horizontal {
     /*float: left;*/
     max-width: 400px;
-    
+
     font-weight: 400;
 }
 
@@ -401,7 +405,7 @@ textarea {
     overflow: hidden;
     transition: all .2s ease-in-out;
     background: linear-gradient(to right, #cf574a, #b366d4);
-  
+
 }
 
 .alt-send-button {
@@ -416,6 +420,7 @@ textarea {
     color: #FFFFFF;
     letter-spacing: 2px;
 }
+
 .fa-paper-plane {
     color: #FFFFFF;
 }
@@ -436,7 +441,7 @@ textarea {
     list-style-type: none;
     margin-left: -30px;
     padding-right: 20px;
-   
+
 }
 
 .list-item {
@@ -445,7 +450,7 @@ textarea {
 }
 
 .contact-text {
-   letter-spacing: 1.9px;
+    letter-spacing: 1.9px;
     color: #000000;
 }
 
@@ -475,7 +480,7 @@ textarea {
 }
 
 .copyright {
-   
+
     color: #555;
     letter-spacing: 1px;
     text-align: center;
@@ -519,9 +524,11 @@ span#resmessages {
     header {
         padding: 3.2rem 6rem;
     }
+
     section#home {
-        padding: 7rem 3rem;
+        padding: 3rem 3rem;
     }
+
     section#home h1 {
         margin-top: 1rem;
         font-size: 40px;
@@ -531,28 +538,14 @@ span#resmessages {
         font-size: 18px;
     }
 
-
     .social_icon a {
-        box-shadow: none;
-        position: relative;
-        height: 30px;
-        width: 30px;
-        margin: 0 10px;
-        display: inline-flex;
-        text-decoration: none;
-        transition: all 0.3s;
-
+        height: 50px;
+        width: 50px;
     }
 
-
     .social_icon a i {
-        position: relative;
-        z-index: 3;
-        text-align: center;
-        width: 100%;
-        height: 100%;
-        font-size: 25px;
-        line-height: inherit;
+        font-size: 18px;
+        line-height: 50px;
     }
 
     section#home .hom_sec_main {
@@ -562,13 +555,13 @@ span#resmessages {
         align-items: self-start;
     }
 
-   
+
 
     .myimg img {
         height: 683px;
         width: 683px;
         align-items: center;
-        margin: 0px -44px;
+
     }
 
 }
@@ -577,9 +570,11 @@ span#resmessages {
     header {
         padding: 2rem 3rem;
     }
+
     section#home {
         padding: 2rem 3rem;
     }
+
     section#home h1 {
         font-size: 30px;
     }
@@ -605,11 +600,11 @@ span#resmessages {
         left: -100vw;
         top: 169.6px;
         width: 100vw;
-        height: calc(730px - 157.6px);
+        height: calc(800px - 114.6px);
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-evenly;
         transition: 1s;
         gap: 0;
         background-color: #ffffff;
@@ -622,24 +617,16 @@ span#resmessages {
 
     }
 
-    .social_icon a i {
-        z-index: -1;
-
-    }
-
-    .social_icon a {
-        background: none;
-
-    }
-
-    .social_icon a:hover:before {
-
-        background: none;
-        box-shadow: none;
-    }
-
     span#typewriter {
         z-index: -1;
+    }
+    .social_icon a {
+        height: 40px;
+        width: 40px;
+    }
+    .social_icon a i{
+        font-size: 16px;
+        line-height: 40px;
     }
 
     .myimg img {
@@ -647,17 +634,20 @@ span#resmessages {
         width: 500px;
         margin: 0px;
     }
+
     .d-flex {
-       
-            display: flex!important;
-            flex-direction: column;
-        
-    
+
+        display: flex !important;
+        flex-direction: column;
+
+
+    }
+
+    section#resume {
+        padding: 1rem 0rem;
+    }
 }
-section#resume {
-    padding: 1rem 0rem;
-}
-}
+
 @media only screen and (max-width: 575px) {
     section#home h1 {
 
@@ -669,17 +659,28 @@ section#resume {
     }
 
     nav ul {
-        top: 151.0px;
+        top: -23px;
 
 
     }
 
     .myimg img {
         padding-top: 20px;
-        height: 400px;
-        width: 390px;
+        height: 300px;
+        width: 290px;
+        display: flex;
         align-items: center;
-      
+
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .myimg img {
+        padding-top: 20px;
+        height: 300px;
+        width: 280px;
+        align-items: center;
+
     }
 }
 
@@ -725,11 +726,23 @@ section#resume {
 
     .form-control,
     textarea {
-
+        max-width: 300px;
         margin: 0 auto;
     }
+    .send-button {
+        width: 300px;
+    }
 
-
+    .alt-send-button {
+        width: 294px;
+        height: 34px;
+        transition: all .1s ease-in-out;
+    }
+    section#contact p {
+        font-size: 15px;
+        text-align: center;
+        font-weight: 300;
+    }
     .name,
     .email,
     textarea {
@@ -757,11 +770,9 @@ section#resume {
         height: 55px;
         line-height: 55px;
     }
-
+    
 }
 
 @media screen and (max-width: 410px) {
-    .send-button {
-        width: 99%;
-    }
+    
 }
