@@ -22,6 +22,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
     integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
 
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 </head>
 
 <body>
@@ -46,22 +48,22 @@
     <div class="hom_sec_main col">
       <div class="hom_sec">
         <h1>Hello, There! <span id="typewriter"></span></h1>
-        <p>A future Web Designer and Developer</p>
+        <p>Aspiring Web Designer and Developer</p>
 
         <div class="social_icon">
-          <a href="https://www.facebook.com/jamela.cruz.98" class="fb icon" target="_blank"><i
-              class="fa-brands fa-facebook-f"></i></a>
-          <a href="https://twitter.com/cruzjamhela56" class="twi icon" target="_blank"><i
-              class="fa-brands fa-twitter"></i></a>
-          <a href="https://www.tiktok.com/@imjamjam" class="tiktok icon" target="_blank"><i
-              class="fa-brands fa-tiktok"></i></a>
-          <a href="https://www.instagram.com/cruzjamela03/" class="insta icon" target="_blank"><i
-              class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.facebook.com/jamela.cruz.98" class="fb icon" target="_blank" data-aos="fade-up"
+            data-aos-duration="1700"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://twitter.com/cruzjamela15" class="twi icon" target="_blank" data-aos="fade-up"
+            data-aos-duration="1800"><i class="fa-brands fa-twitter"></i></a>
+          <a href="https://www.tiktok.com/@imjamjam" class="tiktok icon" target="_blank" data-aos="fade-up"
+            data-aos-duration="1900"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="https://www.instagram.com/cruzjamela03/" class="insta icon" target="_blank" data-aos="fade-up"
+            data-aos-duration="2000"><i class="fa-brands fa-instagram"></i></a>
         </div>
 
       </div>
       <div class="myimg hom_sec">
-        <img src="images/myimg.png" alt="" height="400px" width="400px">
+        <img src="images/myimg.png" alt="" height="400px" width="100%">
       </div>
     </div>
   </section>
@@ -262,13 +264,14 @@
       </div>
 
     </div>
+
   </section>
   <!--End Contact Section-->
 
 
 
   <!--Start Footer-->
-  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top p-5">
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
 
     <a href="index.html">
       <img src="images/logo.png" alt="" height="32px" width="100%">
@@ -317,7 +320,7 @@
   <script>
     const scriptURL = 'https://script.google.com/macros/s/AKfycbwKaNEq2TkENNNRESgkXRsqhWZw1Hc0gdSc8E4Cx414YgU5otPTFmTVdiGl4x_ToOLk/exec'
     const form = document.forms['submit-to-google-sheet']
-    const resmessages = document.getElementById("resmessages") 
+    const resmessages = document.getElementById("resmessages")
 
 
     form.addEventListener('submit', e => {
@@ -325,13 +328,18 @@
       fetch(scriptURL, { method: 'POST', body: new FormData(form) })
         .then(response => {
           resmessages.innerHTML = "Message sent successfully!"
-          setTimeout(function(){
+          setTimeout(function () {
             resmessages.innerHTML = ""
-          },5000)
+          }, 4000)
           form.reset()
         })
         .catch(error => console.error('Error!', error.message))
     })
+  </script>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
   </script>
 
 </body>
